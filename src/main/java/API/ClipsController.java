@@ -5,6 +5,9 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 import API.Model.Clip;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,8 +16,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/clips")
 public class ClipsController {
 
+    private static final int pageSize = 10;
+
     private ClipRepository clipRepository;
     private TwitchLookupService twitchLookupService;
+
 
     public ClipsController(ClipRepository clipRepository, TwitchLookupService twitchLookupService) {
         this.clipRepository = clipRepository;
@@ -23,9 +29,10 @@ public class ClipsController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public List<Clip> getAll() {
-        List<Clip> clips = clipRepository.findAll();
-        return clips;
+    public List<Clip> getAll(@PathVariable("page") int page) {
+        Pageable pageable = new PageRequest(page, pageSize);
+        Page<Clip> clipsPage = clipRepository.findAll(pageable);
+        return clipsPage.getContent();
     }
 
     @GetMapping("/{id}")
