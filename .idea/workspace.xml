@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34adfe74-7044-43e7-a693-c78e57c700aa" name="Default" comment="" />
+    <list default="true" id="34adfe74-7044-43e7-a693-c78e57c700aa" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/API/ApiUtils.java" afterPath="$PROJECT_DIR$/src/main/java/API/ApiUtils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -208,7 +211,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vod.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Vod.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/API/Model/Vod.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -235,14 +238,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TwitchLookupService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/API/TwitchLookupService.java">
+      <file leaf-file-name="ApiUtils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/API/ApiUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="73" lean-forward="true" selection-start-line="1" selection-start-column="73" selection-end-line="1" selection-end-column="73" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -642,10 +653,8 @@
         <option value="$PROJECT_DIR$/src/main/java/API/Model/ClipRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/API/ClipRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/API/utils/ApiUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/API/Application.java" />
         <option value="$PROJECT_DIR$/src/main/resources/API_KEYS.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/API/ApiUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/API/ClipsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/API/TwitchLookupService.java" />
         <option value="$PROJECT_DIR$/src/main/java/API/dbSeeder.java" />
@@ -654,6 +663,8 @@
         <option value="$PROJECT_DIR$/src/main/java/API/Model/Curator.java" />
         <option value="$PROJECT_DIR$/src/main/java/API/Model/Thumbnails.java" />
         <option value="$PROJECT_DIR$/src/main/java/API/Model/Vod.java" />
+        <option value="$PROJECT_DIR$/src/main/java/API/ApiUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -884,12 +895,12 @@
       <option name="presentableId" value="Default" />
       <updated>1516987735349</updated>
       <workItem from="1516987737122" duration="16162000" />
-      <workItem from="1517012876051" duration="346000" />
+      <workItem from="1517012876051" duration="792000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16508000" />
+    <option name="totallyTimeSpent" value="16954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="19" y="23" width="1400" height="761" extended-state="0" />
@@ -1184,22 +1195,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="37" lean-forward="true" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/API/ApiUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/API/TwitchLookupService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1419,6 +1414,22 @@
             <element signature="e#919#920#0" expanded="true" />
             <element signature="e#977#978#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="73" lean-forward="true" selection-start-line="1" selection-start-column="73" selection-end-line="1" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/API/ApiUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
