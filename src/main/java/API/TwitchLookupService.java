@@ -1,8 +1,6 @@
 package API;
 
 import API.Model.Clip;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.oracle.tools.packager.Log;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.*;
 import org.springframework.scheduling.annotation.Async;
