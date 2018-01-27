@@ -29,7 +29,7 @@ public class ClipsController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public List<Clip> getAll(@PathVariable("page") int page) {
+    public List<Clip> getAll(@RequestParam("page") int page) {
         Pageable pageable = new PageRequest(page, pageSize);
         Page<Clip> clipsPage = clipRepository.findAll(pageable);
         return clipsPage.getContent();
