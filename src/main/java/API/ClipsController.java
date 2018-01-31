@@ -8,6 +8,7 @@ import API.Model.Clip;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,8 +31,9 @@ public class ClipsController {
     @GetMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
     public List<Clip> getAll(@RequestParam("page") int page) {
-        Pageable pageable = new PageRequest(page, pageSize);
+        Pageable pageable = new PageRequest(page, pageSize, new Sort(Sort.Direction.DESC,"submitDate.$date"));
         Page<Clip> clipsPage = clipRepository.findAll(pageable);
+
         return clipsPage.getContent();
     }
 
