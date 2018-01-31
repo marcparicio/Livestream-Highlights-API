@@ -29,7 +29,8 @@ public class Clip {
     private Date submitDate;
 
     public Clip() {
-
+        Calendar calendar = Calendar.getInstance();
+        this.submitDate = calendar.getTime();
     }
 
     public Clip(String slug, String tracking_id, String url, String embed_url, String embed_html, Broadcaster broadcaster,
