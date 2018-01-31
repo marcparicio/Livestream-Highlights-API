@@ -43,12 +43,9 @@ public class ClipsController {
     }
 
 
-    //TODO This might be slow for a REST call (waiting for the Twitch API to respond)
-    //TODO might have to improve the submit system
-    //Not the usual POST route but in this case this fits better
-    @PostMapping("/{slug}")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Clip> submitClipBy(@PathVariable("slug") String slug)   {
+    public ResponseEntity<Clip> submitClipBy(@RequestParam("slug") String slug)   {
         CompletableFuture<Clip> clip = null;
         clip = twitchLookupService.getClip(slug);
         //Wait till the clip is available

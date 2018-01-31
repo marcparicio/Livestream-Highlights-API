@@ -3,6 +3,9 @@ package API.Model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Calendar;
+import java.util.Date;
+
 @Document(collection = "Clips")
 public class Clip {
 
@@ -23,6 +26,7 @@ public class Clip {
     private float duration;
     private String created_at;
     private Thumbnails thumbnails;
+    private Date submitDate;
 
     public Clip() {
 
@@ -47,6 +51,8 @@ public class Clip {
         this.duration = duration;
         this.created_at = created_at;
         this.thumbnails = thumbnails;
+        Calendar calendar = Calendar.getInstance();
+        this.submitDate = calendar.getTime();
     }
 
     public String getSlug() {
@@ -175,5 +181,13 @@ public class Clip {
 
     public void setThumbnails(Thumbnails thumbnails) {
         this.thumbnails = thumbnails;
+    }
+
+    public Date getSubmitDate() {
+        return submitDate;
+    }
+
+    public void setSubmitDate(Date submitDate) {
+        this.submitDate = submitDate;
     }
 }
